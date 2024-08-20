@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background-color: #3099B9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-family: 'Lora', serif;
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero .hero-text h2 {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero .hero-text p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Features and Nature Sections */
+section {
+    padding: 50px 20px;
+}
+
+section .content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+section img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+section .text {
+    width: 50%;
+}
+
+section .text h2 {
+    font-family: 'Lora', serif;
+    color: #596831;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section .text p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #3099B9;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #f5f5f5;
+}
+
