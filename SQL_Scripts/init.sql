@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS Payment;
+DROP TABLE IF EXISTS Reservation;
+DROP TABLE IF EXISTS Room;
+DROP TABLE IF EXISTS Customer;
+
 -- Tables
 -- Table: Customer
 CREATE TABLE Customer (
@@ -40,7 +45,7 @@ CREATE TABLE Payment (
     payment_id int NOT NULL AUTO_INCREMENT,
     reservation_id int NOT NULL,
     amount_paid float,
-    payment_date DATE,SS
+    payment_date DATE,
     payment_status varchar(255),
     CONSTRAINT Payment_PK PRIMARY KEY (payment_id),
     CONSTRAINT Reservation_FK FOREIGN KEY (reservation_id) REFERENCES Reservation (reservation_id)
@@ -63,7 +68,9 @@ INSERT INTO Reservation VALUES (NULL, 2, 2, '2025-02-05', '2025-02-12', 2, "Conf
 INSERT INTO Reservation VALUES (NULL, 3, 1, '2025-01-20', '2025-01-23', 4, "Confirmed");
 INSERT INTO Reservation VALUES (NULL, 4, 3, '2025-01-27', '2025-02-01', 4, "Confirmed");
 -- payments
-INSERT INTO Payment VALUES (NULL, 1, 460.00, '2024-09-01', "Success");
-INSERT INTO Payment VALUES (NULL, 2, 805.00, '2024-08-25', "Success");
-INSERT INTO Payment VALUES (NULL, 3, 450.00, '2024-08-16', "Success");
-INSERT INTO Payment VALUES (NULL, 4, 750.00, '2024-08-05', "Success");
+INSERT INTO Payment VALUES (NULL, 1, 460.00, '2024-09-01', "Complete");
+INSERT INTO Payment VALUES (NULL, 2, 805.00, '2024-08-25', "Pending");
+INSERT INTO Payment VALUES (NULL, 3, 450.00, '2024-08-16', "Complete");
+INSERT INTO Payment VALUES (NULL, 4, 750.00, '2024-08-05', "Complete");
+
+
