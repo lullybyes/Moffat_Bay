@@ -20,6 +20,7 @@
         if ($pass != $confpass) {
             throw new Exception("Passwords do NOT match!");
         } else {
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
             $stmt = $conn->prepare("INSERT INTO Customer (first_name, last_name, login_email, login_password, phone_number) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("sssss", $fname, $lname, $email, $pass, $phone);
 
@@ -52,6 +53,7 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="reservations.html">Reservations</a></li>
                 <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
     </header>
