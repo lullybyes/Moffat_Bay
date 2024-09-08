@@ -8,6 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Invalid email address.");
     }
 
+    $stmt = $conn->prepare("CREATE TABLE IF NOT EXISTS moffat_bay.subscribers (email varchar(255) NOT NULL);");
+
+    if ($stmt->execute()) {
+        # Table creation successful
+    } else {
+        # An error occurred. Handle this somehow later?
+    }
+
     $stmt = $conn->prepare("INSERT INTO subscribers (email) VALUES (?)");
     $stmt->bind_param("s", $email);
 
@@ -22,3 +30,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Invalid request method.";
 }
+?>
