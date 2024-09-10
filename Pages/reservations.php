@@ -165,5 +165,12 @@
             </div>
         </form>
     </div>
+
+    <p style="text-align: center; margin-top: 20px;">If you already have a reservation, look up here:</p>
+    <div style="text-align: center; margin-top: 5px;">
+        <a href="ReservationLookup.php">
+            <button class="contact-submit" style="width: 25%; font-size: 16px;">Look Up Reservation</button>
+        </a>
+    </div>
 </body>
 </html>
