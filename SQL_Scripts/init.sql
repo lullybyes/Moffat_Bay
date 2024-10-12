@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS Payment;
 DROP TABLE IF EXISTS Reservation;
 DROP TABLE IF EXISTS Room;
 DROP TABLE IF EXISTS Customer;
+DROP TABLE IF EXISTS Feedback;
 
 -- Tables
 -- Table: Customer
@@ -50,6 +51,14 @@ CREATE TABLE Payment (
     CONSTRAINT Payment_PK PRIMARY KEY (payment_id),
     CONSTRAINT Reservation_FK FOREIGN KEY (reservation_id) REFERENCES Reservation (reservation_id)
 );
+
+CREATE TABLE Feedback(
+    id int(6) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    feedback TEXT NOT NULL,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT Feedback_PK PRIMARY KEY (id)
+    );
 
 -- populating data
 -- rooms
