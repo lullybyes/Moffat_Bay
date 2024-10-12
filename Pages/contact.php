@@ -60,8 +60,17 @@
 
 <?php
 if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    if (empty($email) || empty($name) || empty($subject) || empty($message)) {
+        echo "<p style='color: red;'>All fields are required.</p>";
+    }
+    else{
     // Simulate the message being sent
     echo "<div class='confirmation-message'><strong>Your message has been sent successfully!</strong></div>";
+    }
 }
 ?>
 
